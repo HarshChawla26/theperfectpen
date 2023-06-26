@@ -1,0 +1,25 @@
+nav{
+    /* color:#384955    ; */
+    /* color:#6D1C2B; */
+    /* border: 1px solid brown; */
+}
+#website-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#website-name span{
+    font-size: 30px;
+    margin-left:40%;
+    font-family: 'Dancing Script';
+}
+#navbar{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#navbar a{
+    font-size: 18px;
+    font-family:Tahoma, sans-serif;
+}
