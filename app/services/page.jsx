@@ -1,8 +1,8 @@
 import React from 'react'
-
+import '@styles/services.css'
 function page() {
   return (
-    <div>services</div>
+    <div className='admin-container flex justify-center items-center'>Coming soon . . .</div>
   )
 }
 

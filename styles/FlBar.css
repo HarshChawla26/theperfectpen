@@ -1,0 +1,22 @@
+#Float-bar{
+    position: fixed;
+    z-index:2000;
+    /* bottom:10%;
+    right:10%; */
+    width:70px;
+    height:70px;
+    border-radius: 50%;
+    background-color: #fac6a3;
+}
+.menu-card{
+    width:100%;
+}
+.bubble{
+    width:90%;
+    height:70%;
+}
+.icons{
+    width:99%;
+    height:85%;
+    border-radius: 50%;
+}

@@ -1,0 +1,39 @@
+#Tos-container{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.438);
+    z-index:2000;
+}
+.tos-model{
+    width:57%;
+    height:85%;
+
+}
+.model-content{
+    padding-top: 2%;
+    height:85%;
+}
+.tos-model p{
+    width:70%;
+    margin:auto;
+    margin-top:3%;
+    text-align: justify;
+}
+@media screen and (max-width:768px) {
+    .tos-model{
+        width:70%;
+        height:60%;
+    }
+    .model-content{
+        padding-top: 2%;
+        height:85%;
+    }
+    .tos-model p{
+        width:70%;
+        margin:auto;
+        margin-top:3%;
+        text-align: justify;
+    }
+    
+}

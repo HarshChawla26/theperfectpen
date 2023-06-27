@@ -17,8 +17,9 @@ nav{
 section{
     width:100%;
     /* border: 1px solid black; */
-    height:550px;
+    min-height:550px;
     overflow:hidden;
+    /* overflow: visible !important; */
 }
 .home{
     display: flex;
@@ -26,35 +27,49 @@ section{
     /* background-image: linear-gradient(to BOTTOM LEFT, #ccd3d9, #d5d9de,#d5d9de,#d5d9de,#d5d9de, #dee0e4, #eeeeee86); */
     background-image: linear-gradient(to bottom left, #f4e7de, #f5e8e6,#f5e8e6,#f5e8e6,#f5e8e6, #f2eaec, #eeeeee86);
 }
-.home-left,.home-right{
-    /* border: 1px solid black; */
-    flex:1
-}
-.home-left{
-    width:45%;
-}
 .home-right{
-    width:55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height:450px;
 }
+
 .home-right>div{
-    width:75%;
-    font-size: 18px;
+    width:80%;
+    font-size: 1.2em;
     font-family:'Courgette';
+    margin-right: 10%;
     height: 30%;
     text-align: left;
     /* border: 1px solid brown; */
 }
 .home-right div p{
-    margin-bottom: 3%;
+    margin-bottom: 4%;
+}
+@media screen and (min-width:768px){
+    .left,.right{
+        flex:1
+    }
+    .home-right{
+        height:auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .home-right>div{
+        width:75%;
+        font-size: 18px;
+        font-family:'Courgette';
+        height: 30%;
+        text-align: left;
+        /* border: 1px solid brown; */
+    }
+    .home-right div p{
+        margin-bottom: 3%;
+    }
 }
 .btn-prim-outline{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 3%;
+    /* margin-left: 3%; */
     width:120px !important;
     height: 35px !important;
     transition:all ease-in 0.2s;
@@ -78,4 +93,31 @@ section{
 }
 .pic-div-flex div img{
     object-fit: cover;
+}
+
+@media screen and (max-width:768px) {
+    .home-left{
+        height:150px;
+    }
+    .pic-div-flex{
+        width: 250px;
+        height:350px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        transform:translateX(200px) translateY(-150px) rotate(60deg);
+        /* transform:; */
+        /* border: 1px solid brown; */
+    }
+    .pic-div-flex div{
+        margin: 2%;
+        border-radius: 5px;
+        width:100px;
+        /* height:200px; */
+        /* border: 1px solid brown; */
+    }
+    .pic-div-flex div img{
+        object-fit: cover;
+    }
+    
 }

@@ -4,13 +4,13 @@ import '@styles/navbar.css'
 
 export const Navbar = () => {
   return (
-    /* fixed bg-0 bg-[#f1ded1] z-10 shadow-sm*/
-    <nav className='z-10
+    /*z-10 fixed bg-0 bg-[#f1ded1] z-10 shadow md:shadow-md*/
+    <nav className='z-10 fixed bg-0 bg-[#f1ded1] z-10 shadow md:shadow-md
     '>
-      <div id='website-name' className='text-sec'>
+      <div id='website-name' className='text-sec '>
         <span>theperfectpen.co.in</span>
       </div>
-      <navbar className='text-sec' id='navbar'>
+      <navbar id='navbar' className='text-sec hidden md:flex' >
 
         <Link href='/'>Home</Link>
         <Link href='/services'>services</Link>
