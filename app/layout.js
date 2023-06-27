@@ -1,10 +1,10 @@
-'use client'
+// 'use client';
 import FloatingBar from '@Components/FloatingBar'
 import Footer from '@Components/Footer'
 import { Navbar } from '@Components/Navbar'
 import Tos from '@Components/Tos'
 import '@styles/globals.css'
-import { useState } from 'react'
+// import { useState } from 'react'
 // import { Inter } from 'next/font/google'
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -15,7 +15,7 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  const [showTos, setshowTos] = useState(false)
+  // const [showTos, setshowTos] = useState(false)
   return (
     <html lang="en">
       <head>
@@ -25,10 +25,14 @@ export default function RootLayout({ children }) {
       <body className=''>
         <Navbar/>
         <FloatingBar></FloatingBar>
-        <Tos show={showTos} setshow={setshowTos}/>
+        {/* <Tos 
+         show={showTos} setshow={setshowTos}
+        /> */}
         {children}
 
-        <Footer setshow={setshowTos}/>
+        <Footer 
+        // setshow={setshowTos}
+        />
       </body>
     </html>
   )
