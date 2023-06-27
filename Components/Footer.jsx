@@ -13,7 +13,13 @@ function Footer(
         <div className='flex w-1/2 md:w-1/3 justify-center items-baseline text-lg h-full md:h-10'>theperfectpen21@gmail.com</div>
         <div className='flex w-1/2 md:w-1/3 justify-center items-baseline text-lg h-full md:h-10'>+91-9996774750</div>
       </div>
-      {/* <div className='flex w-3/4 justify-center items-baseline mb-4 h-10'><a role='button' onClick={()=>{setshow(true)}} className='soc-id'>Terms of Services</a></div> */}
+      <div className='flex w-3/4 justify-center items-baseline mb-4 h-10'>
+        <a role='button'
+          // onClick={()=>{setshow(true)}}
+          className='soc-id'>
+          Terms of Services
+        </a>
+      </div>
     </footer>
   )
 }
