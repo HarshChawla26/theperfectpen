@@ -3,7 +3,7 @@ import '@styles/contact.css'
 import '@styles/about.css'
 function about() {
   return (
-    <div className='about-container  flex flex-wrap justify-center items-center'>
+    <div className='about-container bg-prim flex flex-wrap justify-center items-center'>
       <div className='about-box mt-28 flex flex-col md:flex-row bg-hglt'>
         <div className='w-full home-left md:w-3/5 md:h-full flex justify-center items-center  '>
           <img className='w-60 mt-10 md:w-80 ' src='./images/ownerDisplay.JPG'></img>

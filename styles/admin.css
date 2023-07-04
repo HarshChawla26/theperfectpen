@@ -1,0 +1,27 @@
+.admin-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:650px;
+}
+.login-form{
+    width:40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-height:300px;
+}
+.login-form>form{
+    display: flex;
+    flex-direction: column;
+    gap:25px;
+}
+.inf-box{
+    margin-top:2%;
+    margin-bottom:2%;
+}
+.inf-box >.label,.input,.textarea{
+    width:50%;
+    display: inline-block;
+}

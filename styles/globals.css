@@ -80,7 +80,7 @@ section{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    transform:translateX(-10px) translateY(80px) rotate(-60deg);
+    transform:translateX(-10px) translateY(110px) rotate(-60deg);
     /* transform:; */
     /* border: 1px solid brown; */
 }

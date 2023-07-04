@@ -8,13 +8,18 @@ function Home() {
           <div><img src={'./images/display1.jpg'} alt= 'Image1'/></div>
           <div><img src={'./images/display4.jpg'} alt='Image1'/></div>
           <div><img src={'./images/display6.jpg'} alt='Image1'/></div>
-          <div><img src={'./images/display5.jpg'} alt='Image1'/></div>
           <div><img src={'./images/display3.jpg'} alt='Image1'/></div>
           <div><img src={'./images/display2.jpg'} alt='Image1'/></div>
+          <div><img src={'./images/display5.jpg'} alt='Image1'/></div>
           <div><img src={'./images/display1.jpg'} alt='Image1'/></div>
-          <div><img src={'./images/display1.jpg'} alt='Image1'/></div>
+          <div><img src={'./images/display4.jpg'} alt='Image1'/></div>
           <div><img src={'./images/display3.jpg'} alt='Image1'/></div>
           <div><img src={'./images/display3.jpg'} alt='Image1'/></div>
+          <div><img src={'./images/display3.jpg'} alt='Image1'/></div>
+          <div><img src={'./images/display5.jpg'} alt='Image1'/></div>
+          <div><img src={'./images/display1.jpg'} alt='Image1'/></div>
+          <div><img src={'./images/display1.jpg'} alt= 'Image1'/></div>
+          <div><img src={'./images/display4.jpg'} alt='Image1'/></div>
         </div>
       </div>
       <div className='home-right right flex justify-center text-md items-center'>

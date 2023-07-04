@@ -1,0 +1,20 @@
+.input-cell{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border:1px solid black; */
+}
+.input-cell input,select{
+    width:100%;
+}
+textarea{
+    font-size: 0.8em;
+}
+.desc{
+    position: relative;
+}
+.desc>span{
+    color:inherit;
+    top:20%;
+    position: absolute;
+}
