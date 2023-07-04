@@ -11,7 +11,7 @@ function Display() {
         </div>
       </div>
     
-      <div className='w-full h-1/2 display-box relative flex flex-wrap md:w-1/2 h-full'>
+      <div className='w-full h-1/2 display-box relative flex flex-wrap md:w-1/2 md:h-full'>
       <div className="wrappers">
       <div id="frame-card-1" className="frame-cards ">
         <div className="skel-div">
