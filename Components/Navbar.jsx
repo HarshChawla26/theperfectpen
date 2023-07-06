@@ -1,22 +1,39 @@
+'use client'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '@styles/navbar.css'
 
 export const Navbar = () => {
+  const  [showEffect, setshowEffect] = useState(false)
+  const showNav = () => {
+    if(window.scrollY>50){
+      setshowEffect(true)
+    }else{
+      setshowEffect(false)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('scroll',showNav)
+    
+    return () => {
+      window.removeEventListener('scroll',showNav)
+    }
+  })
+  
+
   return (
-    /*z-10 fixed bg-0 bg-[#f1ded1] z-10 shadow md:shadow-md*/
-    <nav className='z-10 fixed
-    '>
+    <nav className={`z-10 fixed ${showEffect && 'bg-0 bg-[#f1ded1] z-10 shadow md:shadow-md'}
+    `}>
       <div id='website-name' className='text-sec '>
       <Link href='/'><span>theperfectpen.co.in</span></Link>
-      </div>
+      </div>  
       <navbar id='navbar' className='text-sec hidden md:flex' >
 
         <Link href='/'>Home</Link>
         <Link href='/services'>services</Link>
         <Link href='/about'>About</Link>
         <Link href='/contact'>Contacts</Link>
-        <Link href='/admin'>Admin</Link>
+        {/* <Link href='/login'>Login</Link> */}
       </navbar>
     </nav>
   )

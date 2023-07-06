@@ -3,10 +3,10 @@ import '@styles/display.css';
 import Link from 'next/link';
 function Display() {
   return (
-    <section className='flex flex-col-reverse display-container md:flex-row justify-start  items-start'>
+    <section className='flex flex-col-reverse display-container md:flex-row font-[Courgette] justify-start  items-start'>
       <div className='w-full h-1/2 md:w-1/2 display-content flex justify-center items-center'>
         <div>
-          <p className='w-80 mt-10 text-lg md:text-base text-center'>Discover our range of personalized services that breathe life into cherished moments.</p>
+          <p className='w-96 mb-6 mt-10 text-lg md:text-xl text-left font-[Courgette]'>Discover our range of personalized services that breathe life into cherished moments.</p>
           <Link href='/services' className='btn-prim-outline mt-5 m-auto md:m-0 border border-sec rounded-md hover:bg-sec hover:text-prim'>View services</Link>
         </div>
       </div>

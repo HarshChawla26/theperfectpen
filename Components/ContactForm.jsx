@@ -26,37 +26,40 @@ function ContactForm() {
 
     async function sendClientDetails(e){
         e.preventDefault();
-        
-        console.log(form);
 
-        // const emailFormat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
-        // if(formData.email.match(emailFormat)){
-        //   alert("Please enter a valid email")
-        //   return;
-        // }
-        // try{
-        //   const res = await fetch(`${uri}/feedbacks`,{
-        //     method:'POST',
-        //     headers:{
-        //       'Content-Type':'application/json'
-        //     },
-        //     body:JSON.stringify(formData)
-        //   });
+        console.log(form)
+
+        const emailFormat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
+        if(form.email.match(emailFormat)){
+          alert("Please enter a valid email")
+          return;
+        }
+        try{
+          const res = await fetch(`/api/postEmail`,{
+            method:'POST',
+            headers:{
+              'Content-Type':'application/json'
+            },
+            body:JSON.stringify(form)
+          });
     
-        //   const dat = await res.json()
-          
-    
-        // }catch(e){
-        //   console.log(e)
-        //   displayResponse("Something went wrong...Try again later..🧡🌺💛");
-        // }
+          const dat = await res.json()
+          console.log(dat)
+          if (res.status >= 400) {
+            return res.status(400).json({
+              error: 'There was an error'
+            });
+          }
+        }catch(e){
+          console.log(e)
+        }
       }
 
 
     
   return (
     <>
-          <span className='text-4xl mt-5 mb-7'>Contact us</span>
+          <h2 className='fon mt-2 '>Contact us</h2>
           <form className='contact-form md:w-5/6 md:h-4/5 table table-fixed' method="POST">
           <div className="table-row">
  

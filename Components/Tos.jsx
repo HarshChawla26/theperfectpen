@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import '@styles/tos.css'
-import Link from 'next/link'
+
 function Tos({show,setshow}) {
     function handleCross(){
         setshow((v)=>{return !v})

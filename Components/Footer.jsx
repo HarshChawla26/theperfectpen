@@ -3,7 +3,7 @@ import '@styles/footer.css'
 import Link from 'next/link'
 
 function Footer(
-  // {setshow}
+  {setshow}
   ) {
   return (
     <footer className='bg-sec font-sans text-prim flex h-80 flex-col items-center gap-5 md:gap-16'>
@@ -15,7 +15,7 @@ function Footer(
       </div>
       <div className='flex w-3/4 justify-center items-baseline mb-4 h-10'>
         <a role='button'
-          // onClick={()=>{setshow(true)}}
+          onClick={()=>{setshow(true)}}
           className='soc-id'>
           Terms of Services
         </a>
