@@ -22,7 +22,7 @@ export const Navbar = () => {
   
 
   return (
-    <nav className={`z-10 fixed ${showEffect && 'bg-0 bg-[#f1ded1] z-10 shadow md:shadow-md'}
+    <nav className={`z-10 fixed ${showEffect && 'bg-0 bg-hglt z-10 shadow md:shadow-md'}
     `}>
       <div id='website-name' className='text-sec '>
       <Link href='/'><span>theperfectpen.co.in</span></Link>

@@ -7,12 +7,19 @@ module.exports = {
   ],
   theme: {
     extend: {
-      //#CCD3D9
-      //#384955
+      
+      // 'prim':'#F4E7DE',
+      // 'sec':'#6D1C2B',
+      // 'hglt':'#f1ded1'
+
+      // 'prim':'#dae3e8',
+      // 'sec':'#395261',
+      // 'hglt':'#c1d7e3'
       colors:{
-        'prim':'#F4E7DE',
-        'sec':'#6D1C2B',
-        'hglt':'#f1ded1'
+        'prim':'#FFF5F5',
+        'sec':'#A8667A',
+        'sec-der':'#754151',
+        'hglt':'#FFE4E5'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

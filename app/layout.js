@@ -1,9 +1,9 @@
+'use client'
 import FloatingBar from '@Components/FloatingBar'
 import Footer from '@Components/Footer'
 import { Navbar } from '@Components/Navbar'
 import Tos from '@Components/Tos'
 import '@styles/globals.css'
-import { useState } from 'react'
 
 import { Provider } from 'react-redux'
 import store from '../store/store';
@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Patrick+Hand"/>
       </head>
       <body className=''>
-        <Provider store={store}>
+        <Provider store={store}>  
           <Navbar/>
           <FloatingBar></FloatingBar>
           <Tos />

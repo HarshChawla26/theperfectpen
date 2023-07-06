@@ -24,8 +24,10 @@ section{
 .home{
     display: flex;
     justify-content: space-around;
-    /* background-image: linear-gradient(to BOTTOM LEFT, #ccd3d9, #d5d9de,#d5d9de,#d5d9de,#d5d9de, #dee0e4, #eeeeee86); */
-    background-image: linear-gradient(to bottom left, #f4e7de, #f5e8e6,#f5e8e6,#f5e8e6,#f5e8e6, #f2eaec, #eeeeee86);
+    background-image: linear-gradient(to left bottom, #fff5f5, #fff5f5, #fff5f5, #fef4f4, #fef4f4, #fef5f5, #fdf6f7, #fdf7f8, #fdf9fb, #fdfbfd, #fefdfe, #ffffff);
+    /* background-image: linear-gradient(to left bottom, #fff5f5, #fdf4f4, #fbf3f3, #f9f2f2, #f7f1f1, #f7f2f2, #f7f3f3, #f7f4f4, #f9f7f7, #fbfafa, #fdfcfd, #ffffff); */
+    /* background-image: linear-gradient(to left bottom, #d8eaf4, #d9ebf3, #dbebf3, #dcecf2, #deecf2, #e0edf2, #e2edf3, #e4eef3, #e7f0f4, #eaf1f5, #edf3f5, #f0f4f6); */
+    /* background-image: linear-gradient(to bottom left, #f4e7de, #f5e8e6,#f5e8e6,#f5e8e6,#f5e8e6, #f2eaec, #eeeeee86); */
 }
 .home-right{
     height:450px;
