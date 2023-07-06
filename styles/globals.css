@@ -93,11 +93,12 @@ section{
     margin: 2%;
     border-radius: 5px;
     width:150px;
-    /* height:200px; */
+    height:200px;
     /* border: 1px solid brown; */
 }
 .pic-div-flex div img{
     object-fit: cover;
+    height: 100%;
 }
 
 @media screen and (max-width:768px) {
