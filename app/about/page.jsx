@@ -9,8 +9,8 @@ function about() {
           <img className='w-60 mt-10 md:w-80 ' src='./images/ownerDisplay.JPG'></img>
         </div>
         <div className='w-full mt-6 md:mt-0 md:w-3/5 md:h-full flex justify-start items-center flex-col md:item-start home-right  '>
-          <h1>About me</h1>
-            <p className='text-sm md:text-sm overflow-scroll' >Hey, I'm Parul
+          <h1 className='fon text-sec'>About me</h1>
+            <p className='font-serif text-sec text-sm md:text-base overflow-scroll ' >Hey, I'm Parul
 I love elevating personalization experience through calligraphy and hand engraving. I personalize items on many different surfaces either by hand-lettering or hand-engraving .<br/><br/>
 
 Weaving my unique style of calligraphy into the personalization experience for your clients or guests, I leave a trail of appreciation that is high in sentimental value in my wake.<br/><br/>

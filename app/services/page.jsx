@@ -57,7 +57,7 @@ function page() {
        {
         arr.map((service)=>{
           return (
-            <div className='bg-hglt w-[90%] md:min-h-[200px] md:w-[65%] flex m-5 flex-col md:flex-row md:odd:flex-row-reverse'>
+            <div key={`${service.name}`} className='bg-hglt w-[90%] md:min-h-[200px] md:w-[65%] flex m-5 flex-col md:flex-row md:odd:flex-row-reverse'>
                 
                 <div className='services-left  w-full md:w-2/5 flex bg-sec justify-center items-center '>
                   <div className='w-[90%] md:w-auto md:h-[90%]'>
@@ -68,7 +68,7 @@ function page() {
                 <div className='services-right md:h-full w-full md:w-3/5  flex flex-col items-center'>
                   <div className=' flex flex-col justify-center gap-7 mt-5 items-center'>
                     <h1 className='h1-font text-sec text-3xl'>{service.name}</h1>
-                    <p className='text-justify'>{service.desc}<br/><br/></p>
+                    <p className='text-justify font-serif text-sec'>{service.desc}<br/><br/></p>
                   </div>
                 </div>
             </div>

@@ -1,10 +1,11 @@
 import React from 'react'
 import '@styles/footer.css'
-import Link from 'next/link'
+import { useDispatch } from 'react-redux'
+import { toggleTos } from '@store/slice/tosSlice';
 
-function Footer(
-  {setshow}
-  ) {
+function Footer() {
+    const dispatch = useDispatch();
+
   return (
     <footer className='bg-sec font-sans text-prim flex h-80 flex-col items-center gap-5 md:gap-16'>
       <h1 className='text-4xl md:text-5xl mt-6'>Contacts</h1>
@@ -15,7 +16,7 @@ function Footer(
       </div>
       <div className='flex w-3/4 justify-center items-baseline mb-4 h-10'>
         <a role='button'
-          onClick={()=>{setshow(true)}}
+          onClick={()=>{dispatch(toggleTos())}}
           className='soc-id'>
           Terms of Services
         </a>

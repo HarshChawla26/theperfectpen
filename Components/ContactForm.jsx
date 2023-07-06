@@ -1,9 +1,9 @@
 'use client';
 import React, { useState } from 'react'
 import '@styles/contact_form.css'
+import '@styles/contact.css'
 
 function ContactForm() {
-    const uri = `${process.env.REACT_APP_API_URL}`
 
     const [form, setform] = useState({
         name: '',
@@ -59,9 +59,9 @@ function ContactForm() {
     
   return (
     <>
-          <h2 className='fon mt-2 '>Contact us</h2>
-          <form className='contact-form md:w-5/6 md:h-4/5 table table-fixed' method="POST">
-          <div className="table-row">
+          <h2 className='fon mb-5 mt-2 '>Contact us</h2>
+          <form className='contact-form w-[95%] h-full md:w-5/6 md:h-4/5 table table-fixed' method="POST">
+          <div className="table-row my-10">
  
             <label htmlFor="name" className='table-cell'>
               Your name<span> *</span>
@@ -113,7 +113,7 @@ function ContactForm() {
                 id="phone"
                 value={form.phone}
                 name= 'phone'
-                placeholder=""
+                placeholder="94xxxxxxxx"
                 required
               />
               </div>
@@ -185,10 +185,10 @@ function ContactForm() {
                 ></textarea>
             </div>
           </div>
-        </form>
-          <button type="submit"  onClick={sendClientDetails} className=" text-sec btn-prim-outline border border-sec rounded-md hover:bg-sec hover:text-prim mb-3">
+          <button type="submit"  onSubmit={sendClientDetails} className=" ms-24 md:ms-44 text-sec btn-prim-outline border border-sec rounded-md hover:bg-sec hover:text-prim mb-3">
             Submit
           </button>
+        </form>
         </>
   )
 }

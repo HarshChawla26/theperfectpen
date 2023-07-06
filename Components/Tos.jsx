@@ -1,18 +1,23 @@
 'use client'
 import React, { useState } from 'react'
 import '@styles/tos.css'
+import { useDispatch, useSelector } from 'react-redux'
+import { toggleTos } from './../store/slice/tosSlice'
+function Tos() {
 
-function Tos({show,setshow}) {
+    const show = useSelector(state => state.showtos.value)
+    const dispatch = useDispatch()
+
     function handleCross(){
-        setshow((v)=>{return !v})
+        dispatch(toggleTos())
     }
   return (
-    <div id='Tos-container' onClick={()=>{handleCross()}} className={`${!show?'hidden':'flex'} justify-center items-center`}>
+    <div id='Tos-container' onClick={()=>dispatch(toggleTos())} className={`${!show?'hidden':'flex'} justify-center items-center`}>
         <div className='tos-model bg-prim'>
             <div className='flex justify-between gap-10'>
                 <div className='mt-5 hidden md:block'></div>
                 <h1 className='mt-5 ms-4 text-xl md:text-3xl'>Terms of Services</h1>
-                <div className='mt-5 me-5 text-xl md:text-2xl'><button type='button' onClick={()=>{handleCross()}}>X</button></div>
+                <div className='mt-5 me-5 text-xl md:text-2xl'><button><img onClick={()=>dispatch(toggleTos())} className='w-10' src='icons/cross.svg'/></button></div>
             </div>
             <div className='model-content mt-0 overflow-scroll md:overflow-auto'>
                 

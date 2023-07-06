@@ -5,6 +5,10 @@ import { Navbar } from '@Components/Navbar'
 import Tos from '@Components/Tos'
 import '@styles/globals.css'
 import { useState } from 'react'
+
+import { Provider } from 'react-redux'
+import store from '../store/store';
+
 // import { Inter } from 'next/font/google'
 
 // const inter = Inter({ subsets: ['latin'] })
@@ -19,7 +23,6 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  const [showTos, setshowTos] = useState(false)
   return (
     <html lang="en">
       <head>
@@ -28,16 +31,14 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Patrick+Hand"/>
       </head>
       <body className=''>
-        <Navbar/>
-        <FloatingBar></FloatingBar>
-        <Tos 
-         show={showTos} setshow={setshowTos}
-        />
-        {children}
+        <Provider store={store}>
+          <Navbar/>
+          <FloatingBar></FloatingBar>
+          <Tos />
+          {children}
 
-        <Footer 
-        setshow={setshowTos}
-        />
+          <Footer />
+        </Provider>
       </body>
     </html>
   )
