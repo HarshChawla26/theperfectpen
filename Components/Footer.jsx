@@ -1,3 +1,4 @@
+'use client';
 import React from 'react'
 import '@styles/footer.css'
 import { useDispatch } from 'react-redux'
