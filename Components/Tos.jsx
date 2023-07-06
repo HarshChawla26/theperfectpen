@@ -1,8 +1,8 @@
 'use client'
-import React, { useState } from 'react'
+import React from 'react'
 import '@styles/tos.css'
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleTos } from './../store/slice/tosSlice'
+import { toggleTos } from '@redux/slice/tosSlice'
 function Tos() {
 
     const show = useSelector(state => state.showtos.value)

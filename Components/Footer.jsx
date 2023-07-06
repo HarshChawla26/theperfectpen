@@ -1,7 +1,7 @@
 import React from 'react'
 import '@styles/footer.css'
 import { useDispatch } from 'react-redux'
-import { toggleTos } from '@store/slice/tosSlice';
+import { toggleTos } from '@redux/slice/tosSlice';
 
 function Footer() {
     const dispatch = useDispatch();
