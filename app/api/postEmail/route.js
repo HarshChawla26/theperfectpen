@@ -12,7 +12,7 @@ export async function POST(req){
             deadline ,
             desc 
         };
-        
+
         const transporter = await nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -20,7 +20,7 @@ export async function POST(req){
                 pass: process.env.PassCode
             }
         });
-        let info = transporter.sendMail({
+        let info = await transporter.sendMail({
             from: `${process.env.Email}`,
             to:`${data.email}`, 
             subject:"🖋️ Thank you for reaching out! We'll be in touch soon!",
@@ -55,7 +55,7 @@ theperfectpen
             }).catch(err=>{
                 return  err;
             })
-        let mail = transporter.sendMail({
+        let mail = await transporter.sendMail({
             from: `${process.env.Email}`,
             to:`${process.env.Email}`, 
             subject:'New Calligraphy Service Inquiry - User Details',
