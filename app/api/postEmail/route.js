@@ -13,6 +13,7 @@ export async function POST(req){
             desc 
         };
 
+        
         const transporter = await nodemailer.createTransport({
             service: 'gmail',
             auth: {
@@ -20,7 +21,21 @@ export async function POST(req){
                 pass: process.env.PassCode
             }
         });
-        let info = await transporter.sendMail({
+
+        // await new Promise((resolve, reject) => {    
+        //     transporter.verify(function (error, success) {
+        //         if (error) {
+        //             console.log('error');
+        //             console.log(error);
+        //             reject(error);
+        //         } else {
+        //             console.log("Server is ready to take our messages");
+        //             resolve(success);
+        //         }
+        //     });
+        // });
+
+        const mailData = {
             from: `${process.env.Email}`,
             to:`${data.email}`, 
             subject:"🖋️ Thank you for reaching out! We'll be in touch soon!",
@@ -48,14 +63,22 @@ Parul Wadhawan
 theperfectpen
 🖋️
 `
-            }).then((info)=>{
-                return info.json
-            }).then((data)=>{
-                return data
-            }).catch(err=>{
-                return  err;
-            })
-        let mail = await transporter.sendMail({
+        }
+
+        await new Promise((resolve, reject) => {
+            // send mail
+            transporter.sendMail(mailData, (err, info) => {
+                if (err) {
+                    console.error(err);
+                    reject(err);
+                } else {
+                    console.log(info);
+                    resolve(info);
+                }
+            });
+        });
+
+        let ownerMailData = {
             from: `${process.env.Email}`,
             to:`${process.env.Email}`, 
             subject:'New Calligraphy Service Inquiry - User Details',
@@ -82,13 +105,18 @@ Best regards,
 
 theperfectpen
 🖋️`
-        }).then((info)=>{
-            return info.json
-        }).then((data)=>{
-            return data
-        }).catch(err=>{
-            return  err;
-        })
+        }
+        await new Promise((resolve, reject) => {
+            // send mail
+            transporter.sendMail(ownerMailData, (err, info) => {
+                if (err) {
+                    console.error(err);
+                    reject(err);
+                } else {
+                    resolve(info);
+                }
+            });
+        });
 
         return NextResponse.json({message:'Done'},{status:200});
     } catch (error) {

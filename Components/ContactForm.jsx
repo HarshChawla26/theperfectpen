@@ -146,28 +146,17 @@ function ContactForm() {
 
           <div className="table-row">
 
-              <label htmlFor="email" className="table-cell">
+              <label htmlFor="typeofProject" className="table-cell">
                 Type of project<span> *</span>
               </label>
               <div className='table-cell  input-cell'>
               <select
-                id="email"
+                id="top"
                 name= 'typeofProject'
                 placeholder=""
                 value={form.typeofProject}
                 required
                 onChange={handleinputchange}
-                // options={[
-                //   {'value': 'Handwritten letters', 'label': 'Handwritten letters'},
-                //   {'value': 'Envelope addressing', 'label': 'Envelope addressing'}
-                //   {'value': 'Placecards and tags', 'label': 'Placecards and tags'}
-                //   {'value': 'Commissioned frame work', 'label': 'Commissioned frame work'}
-                //   {'value': 'Signages for events', 'label': 'Signages for events'}
-                //   {'value': 'On-site activation', 'label': 'On-site activation'}
-                //   {'value': 'Custom engraving', 'label': 'Custom engraving'}
-                //   {'value': 'Learn hand engraving', 'label': 'Learn hand engraving'}
-                //   {'value': 'Learn copperplate calligraphy', 'label': 'Learn copperplate calligraphy'}
-                // ]}
               >
                 <option value={'0'}> </option>
                 <option value=' Handwritten letters'             >Handwritten letters</option>
@@ -202,7 +191,7 @@ function ContactForm() {
           </div>
 
           <div className="table-row">
-            <label htmlFor="msg" className="table-cell desc">
+            <label htmlFor="desc" className="table-cell desc">
               <span>Description</span>
             </label>
             <div className='table-cell input-cell'>
@@ -212,7 +201,7 @@ function ContactForm() {
                     type="text"
                     rows='5'
                     cols='100'
-                    id="msg3"
+                    id="desc"
                     name="desc"
                     value={form.desc}
                     placeholder="Tell me more about this project . . ."
