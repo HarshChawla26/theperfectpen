@@ -32,9 +32,9 @@ Rest assured that our team of passionate and creative calligraphers is ready to 
             
 Here's a summary of the information you provided:
             
-    📋 Type of Project: ${data.typeofproject}
-    ⏰ Deadline: ${data.deadline}
-    📝 Description: ${(data.desc!==''?data.desc:'None')}
+    📋 Type of Project  :   ${data.typeofproject}
+    ⏰ Deadline          :     ${data.deadline}
+    📝 Description      :   ${(data.desc!==''?data.desc:'None')}
             
 We want to assure you that we are diligently reviewing your request and analyzing the specifics of your project. Our calligrapher and owner will personally go through the details to ensure that we fully understand your requirements.
             
@@ -63,12 +63,12 @@ theperfectpen
             
 A new inquiry has been received through our website's contact form. Here are the details provided by the user:
 
-    👤 Name: ${data.name}
-    📞 Phone Number: ${data.phone}
-    ✉️ Email: ${data.email}
-    📋 Type of Project: ${data.typeofproject}
-    ⏰ Deadline: ${data.deadline}
-    📝 Description: ${(data.desc!==''?data.desc:'None')}
+    👤 Name        :   ${data.name}
+    📞 Phone Number   :   ${data.phone}
+    ✉️ Email      :   ${data.email}
+    📋 Type of Project   :   ${data.typeofproject}
+    ⏰ Deadline      :   ${data.deadline}
+    📝 Description       :   ${(data.desc!==''?data.desc:'None')}
 
 The user expressed interest in our calligraphy services and is eager to discuss their project further. They found us through our website and have entrusted us with bringing their vision to life.
 

@@ -16,7 +16,6 @@ function ContactForm() {
 
     const handleinputchange = (e) => {
         const { name, value } = e.target;
-        console.log(`${name} : ${value}`)
         setform({
           ...form,
           [name]: value,
@@ -27,7 +26,13 @@ function ContactForm() {
     async function sendClientDetails(e){
         e.preventDefault();
 
-        console.log(form)
+        if(form.name===''||form.email===''||form.phone===''||form.typeofProject===''||form.deadline===''){
+          console.log(form)
+          alert('Incomplete Info');
+          return;
+        }
+
+        console.log(form);
 
         const emailFormat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
         if(form.email.match(emailFormat)){
@@ -133,11 +138,21 @@ function ContactForm() {
                 value={form.typeofProject}
                 required
                 onChange={handleinputchange}
-                defaultValue={'0'}
+                // options={[
+                //   {'value': 'Handwritten letters', 'label': 'Handwritten letters'},
+                //   {'value': 'Envelope addressing', 'label': 'Envelope addressing'}
+                //   {'value': 'Placecards and tags', 'label': 'Placecards and tags'}
+                //   {'value': 'Commissioned frame work', 'label': 'Commissioned frame work'}
+                //   {'value': 'Signages for events', 'label': 'Signages for events'}
+                //   {'value': 'On-site activation', 'label': 'On-site activation'}
+                //   {'value': 'Custom engraving', 'label': 'Custom engraving'}
+                //   {'value': 'Learn hand engraving', 'label': 'Learn hand engraving'}
+                //   {'value': 'Learn copperplate calligraphy', 'label': 'Learn copperplate calligraphy'}
+                // ]}
               >
-                <option value='0'>  </option>
+                <option value={'0'}> </option>
                 <option value=' Handwritten letters'             >Handwritten letters</option>
-                <option value=' Envelope addressing'             >Envelope addressing</option>
+                <option value=' Envelope addressing'             >Envelope addressing</option> 
                 <option value=' Placecards and tags'             >Placecards and tags</option>
                 <option value=' Commissioned frame work'         >Commissioned frame work</option>
                 <option value=' Signages for events'             >Signages for events</option>
@@ -185,7 +200,7 @@ function ContactForm() {
                 ></textarea>
             </div>
           </div>
-          <button type="submit"  onSubmit={sendClientDetails} className=" ms-24 md:ms-44 text-sec btn-prim-outline border border-sec rounded-md hover:bg-sec hover:text-prim mb-3">
+          <button type="submit"  onClick={sendClientDetails} className=" ms-24 md:ms-44 text-sec btn-prim-outline border border-sec rounded-md hover:bg-sec hover:text-prim mb-3">
             Submit
           </button>
         </form>
