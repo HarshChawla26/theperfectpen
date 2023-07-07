@@ -78,9 +78,6 @@ function ContactForm() {
           console.log(e)
         }
       }
-
-
-    
   return (
     <>
           <h2 className='fon mb-5 mt-2 '>Contact us</h2>
