@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import '@styles/contact_form.css'
 import '@styles/contact.css'
+import { toast } from "react-toastify";
 
 function ContactForm() {
 
@@ -32,8 +33,6 @@ function ContactForm() {
           return;
         }
 
-        console.log(form);
-
         const emailFormat = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/"
         if(form.email.match(emailFormat)){
           alert("Please enter a valid email")
@@ -49,12 +48,32 @@ function ContactForm() {
           });
     
           const dat = await res.json()
-          console.log(dat)
+          
           if (res.status >= 400) {
+            toast.error("Something went wrong. Try again later...", {
+              position: "top-right",
+              autoClose: 3000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+              theme: "colored",
+              });
             return res.status(400).json({
               error: 'There was an error'
             });
           }
+          toast.success("We'll reply back soon. Thank you! ✨", {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
         }catch(e){
           console.log(e)
         }

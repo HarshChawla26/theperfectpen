@@ -4,6 +4,9 @@ import { Navbar } from '@Components/Navbar'
 import Tos from '@Components/Tos'
 import '@styles/globals.css'
 
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 import ReduxProvider from '@redux/Prvidr'
 
 // export async function generateMetadata({params,searchParams}){
@@ -29,6 +32,18 @@ export default function RootLayout({ children }) {
             <FloatingBar></FloatingBar>
             <Tos />
             {children}
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+              theme="colored"
+              />
             <Footer />
          </ReduxProvider>
       </body>
