@@ -14,7 +14,7 @@ import ReduxProvider from '@redux/Prvidr'
 // }
 
 export const metadata = {
-  title: 'theperfectpen - Home',
+  title: 'theperfectpen',
   description: 'The website is owned by Parul, who specializes in elevating personalization experiences through calligraphy and hand engraving. Parul offers personalized items on various surfaces, using hand-lettering or hand-engraving techniques. The focus is on creating a unique and sentimental value for clients or guests. The website serves several types of clients, including brands looking to enhance customer relationships, corporates seeking personalized gifts for their employees, event planners and couples aiming to provide memorable guest experiences, and thoughtful gifters who want to give unique and sentimental gifts.',
 }
 
