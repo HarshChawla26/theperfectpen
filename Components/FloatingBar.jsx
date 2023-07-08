@@ -60,7 +60,7 @@ function FloatingBar() {
             </div>
         </div>
     </div>
-    <div id='Float-bar' className={`!w-[50px] !h-[50px] right-10 ${showFooBar?'bottom-[58%]':'bottom-36'} md:bottom-14 shadow-lg bg-hglt flex justify-center items-center cursor-pointer`}>
+    <div id='Float-bar' className={`!w-[50px] !h-[50px] ${showFooBar?'right-32 bottom-16':'bottom-36 right-10'} md:bottom-14 shadow-lg bg-hglt flex justify-center items-center cursor-pointer`}>
             <a href='https://instagram.com/theperfectpen_?igshid=ZDc4ODBmNjlmNQ==' target='_blank'><img src='./icons/insta.webp'/></a>
     </div>
     <div id='Float-bar' className='md:hidden hover:bg-sec hover:text-prim p-3 active:bg-none right-10 bottom-14 shadow-lg bg-hglt flex justify-center items-center cursor-pointer' onClick={()=>{handleFloat()}}>
