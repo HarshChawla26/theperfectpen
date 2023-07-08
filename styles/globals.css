@@ -79,15 +79,29 @@ section{
     height: 35px !important;
     transition:all ease-in 0.2s;
 }
+/* @keyframes reel {
+    0%{
+        
+        transform:translateX(-360px) translateY(-90px) rotate(-60deg);
+    }
+    100%{
+        transform:translateX(-10px) translateY(110px) rotate(-60deg);
+    }
+}*/
 .pic-div-flex{
+    /* animation-name: reel;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+    animation-timing-function:ease-in-out;
+    animation-delay: 0s; */
+    
     width: 350px;
     height:600px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     transform:translateX(-10px) translateY(110px) rotate(-60deg);
-    /* transform:; */
-    /* border: 1px solid brown; */
 }
 .pic-div-flex div{
     margin: 2%;

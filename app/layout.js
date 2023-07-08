@@ -1,7 +1,10 @@
+import { Analytics } from '@vercel/analytics/react';
+
 import FloatingBar from '@Components/FloatingBar'
 import Footer from '@Components/Footer'
 import { Navbar } from '@Components/Navbar'
 import Tos from '@Components/Tos'
+
 import '@styles/globals.css'
 
 import 'react-toastify/dist/ReactToastify.css';
@@ -45,6 +48,7 @@ export default function RootLayout({ children }) {
               theme="colored"
               />
             <Footer />
+            <Analytics />
          </ReduxProvider>
       </body>
     </html>
