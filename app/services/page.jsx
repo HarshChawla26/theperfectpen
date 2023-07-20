@@ -18,7 +18,7 @@ function page() {
       desc:"Placecards and tags are small yet impactful details that elevate any event or gathering. These meticulously crafted items serve multiple purposes, including assigning seats, guiding attendees, and adding a personal touch to each guest's experience. Whether handwritten or creatively designed, placecards and tags offer a sense of organization and elegance. They can feature names, or even personalized messages, creating a warm and welcoming ambiance."
     },
     {
-      name:'Commisioned frome work',
+      name:'Commisioned frame work',
       img:'./services/cfw.jpg',
       desc:'Commissioned artwork offers a unique opportunity to acquire personalized and bespoke pieces that reflect individual preferences and tastes. By collaborating directly with an artist, clients can express their vision and have it translated into a one-of-a-kind framed creation. Commissioned artwork adds a distinctive touch to any space, capturing emotions, memories, or capturing specific themes.'
     },
